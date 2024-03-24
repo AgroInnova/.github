@@ -16,10 +16,10 @@ AgroInnova está comprometido a apoyar en los cumplimientos de los Objetivos de 
 #### Repositorios Relevantes
 
 
-- Node.js
-+ Express
-* Nest.js
-- Learning Backend ⌛️
+- [ICP Cannisters](https://github.com/AgroInnova/ICP_frontend_Backend)https://github.com/AgroInnova/ICP_frontend_Backend
++ [Backend Local Web2, NestJS ](https://github.com/AgroInnova/AgroInnova_NestEdge)https://github.com/AgroInnova/AgroInnova_NestEdge
+* [MQTT Testers -Python(Simulacion esp32)](https://github.com/AgroInnova/mqtt-testers)https://github.com/AgroInnova/mqtt-testers
+- [Contrats & Resolvers EAS](https://github.com/AgroInnova/AgroInnova-SmartContracts-Resolvers)https://github.com/AgroInnova/AgroInnova-SmartContracts-Resolvers
 
-https://github.com/AgroInnova/ICP_frontend_Backend
+
 
