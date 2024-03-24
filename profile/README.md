@@ -163,7 +163,9 @@ Fortunately this is automatically done by the ICP backend, more about this in a 
 
 In my case
 http://bd3sg-teaaa-aaaaa-qaaba-cai.localhost:8000/
-Is the url for the frontend, once I go in there ICP Internet Identity window will popup asking me to log in with a new internet Identity
+Is the url for the frontend, once I go in there ICP Internet Identity window will popup asking me to log in with a new internet Identity 
+
+YOU WILL NEED TO ALLOW THIS PAGE TO DO POP UPS OTHERWISE YOU WILL NOT BE ABLE TO USE INTERNET IDENTITY.
 
 ![image](https://github.com/AgroInnova/.github/assets/105945231/7d0e61eb-2ca2-48e0-9d5e-4eecd2fda6b4)
 
@@ -182,7 +184,8 @@ You'll be redirected to the admin page. Which allows you to go ahead and setup m
 
 once that is done the fields should be setup.
 
-![image](https://github.com/AgroInnova/.github/assets/105945231/9dd52654-1e81-4682-acd5-14a26862799f)
+![image](https://github.com/AgroInnova/.github/assets/105945231/b94b565a-c686-4917-8c13-a085b41dd884)
+
 
 
 Then just write any numbers on equpment id and click on 'Registrar' and it will start the contract call
@@ -190,6 +193,21 @@ Then just write any numbers on equpment id and click on 'Registrar' and it will 
 ![image](https://github.com/AgroInnova/.github/assets/105945231/ea9005f8-cdf7-4ac0-a808-5242a4864f3d)
 
 Just confirm it and after a while 10-20 seconds , the attestation should be complete, you'll be able to see it on Scroll Sepolia's scan and EAS Scan via the schema's hash.
+
+
+
+Then you'll need to create a new Internet Identity, go ahead and click on the logout button on the top right corner of the screen.
+You'll be taken to the logout page.
+
+Go ahead and go into the frontend cannister's url again.
+http://bd3sg-teaaa-aaaaa-qaaba-cai.localhost:8000/
+
+You'll be greeted once again with the login popup
+
+![image](https://github.com/AgroInnova/.github/assets/105945231/ae247fa9-4e0a-4e7c-a6f5-4886737c9b58)
+
+
+
 
 
 
