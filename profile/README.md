@@ -8,3 +8,7 @@ AgroInnova está comprometido a apoyar en los cumplimientos de los Objetivos de 
 - Salud y bienestar → Mejorando el perfil nutricional gracias al cultivo de frutas y verduras.
 - Industria, innovación e infraestructura → Trayendo la industria 4.0 con IoT al cultivo con trazabilidad y persistencia aprovechando la tecnología Blockchain.
 - Producción y consumo responsables → Gestión eficiente del agua, tierra y energía.
+
+
+## 🖥️AgroInnova-Expliacion Tecnica🍃
+![agroInnovaETHLATAM](https://github.com/AgroInnova/.github/assets/105945231/a75750aa-b195-4a36-b446-a2f16e099718)
