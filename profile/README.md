@@ -22,4 +22,24 @@ AgroInnova está comprometido a apoyar en los cumplimientos de los Objetivos de 
 - [Contrats & Resolvers EAS](https://github.com/AgroInnova/AgroInnova-SmartContracts-Resolvers)https://github.com/AgroInnova/AgroInnova-SmartContracts-Resolvers
 
 
+#### Smart Contracts & Resolvers
+
+[ATTESTER
+0x4D57CEA19A2783D96872C965E7A092250bbf5775
+](https://sepolia.scrollscan.com/address/0x4D57CEA19A2783D96872C965E7A092250bbf5775)https://sepolia.scrollscan.com/address/0x4D57CEA19A2783D96872C965E7A092250bbf5775
+
+
+[Resolver 
+0x56A7c6cF042EabF0DCC109956c226D1743aeA84C
+](https://sepolia.scrollscan.com/address/0x56a7c6cf042eabf0dcc109956c226d1743aea84c#code)https://sepolia.scrollscan.com/address/0x56a7c6cf042eabf0dcc109956c226d1743aea84c#code
+
+[SCHEMA:#108
+0x14050ed8107691323eb632a934dfc33e1338e7950894a8edb1d3f6fbce0d79fe](https://scroll-sepolia.easscan.org/schema/view/0x14050ed8107691323eb632a934dfc33e1338e7950894a8edb1d3f6fbce0d79fe)https://scroll-sepolia.easscan.org/schema/view/0x14050ed8107691323eb632a934dfc33e1338e7950894a8edb1d3f6fbce0d79fe
+
+[EAS
+0xaEF4103A04090071165F78D45D83A0C0782c2B2a](https://sepolia.scrollscan.com/address/0xaEF4103A04090071165F78D45D83A0C0782c2B2a#code)https://sepolia.scrollscan.com/address/0xaEF4103A04090071165F78D45D83A0C0782c2B2a#code
+
+[RECIPIENT
+0x1684C2a107C113c4CCB02dF651933978491dB385](https://sepolia.scrollscan.com/address/0x1684C2a107C113c4CCB02dF651933978491dB385)https://sepolia.scrollscan.com/address/0x1684C2a107C113c4CCB02dF651933978491dB385
+
 
