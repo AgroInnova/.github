@@ -46,7 +46,7 @@ AgroInnova está comprometido a apoyar en los cumplimientos de los Objetivos de 
 
 
 
-## 🖥️Desplegar demo de testeos🍃
+## 🖥️Prototype demo deployment🍃
 
 To deploy the prototype testing environment you will nedd the following.
 
@@ -89,6 +89,7 @@ $dfx start --host 127.0.0.1:8000 --clean
 
 In here you'll need to wait untill the deployment is complete
 Once deployed you'll see this in the terminal
+
 ````
 Deployed canisters.
 URLs:
@@ -104,7 +105,49 @@ URLs:
     internet_identity: http://127.0.0.1:8000/?canisterId=br5f7-7uaaa-aaaaa-qaaca-cai&id=be2us-64aaa-aaaaa-qaabq-cai
 ````
 
+Now go ahead and take a look at the generated .env file within the frontend folder
 
+````
+code src/Frontend/.env
+
+````
+It should look something like this
+
+````
+VITE_CANISTER_ORIGIN=http://bkyz2-fmaaa-aaaaa-qaaaq-cai.localhost:8000
+VITE_IDENTITY_PROVIDER=http://be2us-64aaa-aaaaa-qaabq-cai.localhost:8000
+II_URL=http://be2us-64aaa-aaaaa-qaabq-cai.localhost:8000
+````
+You'll need the url on VITE_CANISTER_ORIGIN
+Now to make sure that the NestJs backend has access to the ICP backend cannister we need to configure our hosts file.
+(if this is not done the NestJS backend will not be able to find the url host to push the data to ICP)
+
+Go ahead and do:
+
+````
+$ sudo nano /etc/hosts
+````
+
+![image](https://github.com/AgroInnova/.github/assets/105945231/5294957e-6f20-43e0-969e-536b3fe662c8)
+
+Add the highlighted line on 127.0.0.1 with the value provided on VITE_CANISTER_ORIGIN
+
+
+Now go into the AgroInnova_NestEdge directory
+
+````
+cd AgroInnova_NestEdge
+````
+
+While in there you'll need to add the endpoint mannually, since the cannister url changes on different deployments and systems
+
+````
+$code src/typeormsqlite/typeormsqlite.service.ts
+
+````
+Youll need to change the endpoint that is on the post with the information on the env variable VITE_CANISTER_ORIGIN/sensorData
+
+![image](https://github.com/AgroInnova/.github/assets/105945231/528128b8-8a69-4a64-b179-e509fb72ca31)
 
 
 
