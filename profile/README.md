@@ -1,4 +1,4 @@
-### 🖥️AgroInnova🍃
+![image](https://github.com/AgroInnova/.github/assets/105945231/da63fbef-7865-438d-adea-b45356520aff)### 🖥️AgroInnova🍃
 AgroInnova busca transformar la agricultura a través de la innovación, la responsabilidad, la sostenibilidad y la accesibilidad. Brindamos soluciones tecnológicas avanzadas para mejorar la producción de alimentos y el uso eficiente de los recursos. Nos comprometemos con la responsabilidad social, trabajando en colaboración con fundaciones y programas de sostenibilidad para llevar nuestra tecnología a comunidades vulnerables. Buscamos generar un impacto social positivo y mejorar la calidad de vida de las personas.
 
 Nuestro producto y servicio consiste en proporcionar soluciones tecnológicas para el control y monitoreo de sistemas aeropónicos o hidropónicos. Utilizamos una estructura modular personalizable, sensores y algoritmos, infraestructura física y en la nube, para tomar decisiones informadas en tiempo real y reducir costos de operación. Nuestra tecnología es capaz de optimizar la producción de alimentos, mejorar la eficiencia en el uso de recursos y aumentar la rentabilidad de los agricultores. Además, ofreceríamos servicios de mantenimiento y soporte técnico para garantizar el correcto funcionamiento de nuestros sistemas.
@@ -57,7 +57,8 @@ If using windows, you'll need wsl, ubuntu as the main os would be the best but h
 - Nodejs19+ 
 - DFX(ICP CLI) :[ Here](https://internetcomputer.org/docs/current/developer-docs/developer-tools/dev-tools-overview)https://internetcomputer.org/docs/current/developer-docs/developer-tools/dev-tools-overview
 - NestJS : [Here:](https://docs.nestjs.com/)https://docs.nestjs.com/
-- Ionic : [Here](https://ionicframework.com/)https://ionicframework.com/ 
+- Ionic : [Here](https://ionicframework.com/)https://ionicframework.com/
+- Metamask setup on Scroll Sepolia testnet with funds.
 
 
 #### Clone the following repositories
@@ -148,6 +149,53 @@ $code src/typeormsqlite/typeormsqlite.service.ts
 Youll need to change the endpoint that is on the post with the information on the env variable VITE_CANISTER_ORIGIN/sensorData
 
 ![image](https://github.com/AgroInnova/.github/assets/105945231/528128b8-8a69-4a64-b179-e509fb72ca31)
+
+Once this is done you can go ahead and deploy the nestJs backend
+
+```
+$nest start
+```
+
+Now you'll need to configure users and the admin on the ICP backend via the frontend
+Fortunately this is automatically done by the ICP backend, more about this in a minute.
+
+![image](https://github.com/AgroInnova/.github/assets/105945231/63bc0ef8-f1ab-4dd2-8d7a-06e582a207d4)
+
+In my case
+http://bd3sg-teaaa-aaaaa-qaaba-cai.localhost:8000/
+Is the url for the frontend, once I go in there ICP Internet Identity window will popup asking me to log in with a new internet Identity
+
+![image](https://github.com/AgroInnova/.github/assets/105945231/7d0e61eb-2ca2-48e0-9d5e-4eecd2fda6b4)
+
+The steps are simple just follow them and once you are logged in everything should be good to go for that one identity.
+The frontend will make the request to see if any admins or users have been setup and since no user or admin had been previously registered the first identity created will always be the admin.
+
+Every other Identity created will be treated as a user.
+
+Once the backend has authenticated the first identity created
+![image](https://github.com/AgroInnova/.github/assets/105945231/d6a45c77-22ca-469a-ac83-6e0f9999bf3c)
+
+You'll be redirected to the admin page. Which allows you to go ahead and setup manual attestations for individual users. You can create a custom attestation here if you wish to try it. To fill out the activation days and user ID field make sure to go press the two last buttons.
+
+
+![image](https://github.com/AgroInnova/.github/assets/105945231/429c024e-a1c6-427a-a0c3-e4bcaca9f6b0)
+
+once that is done the fields should be setup.
+
+![image](https://github.com/AgroInnova/.github/assets/105945231/9dd52654-1e81-4682-acd5-14a26862799f)
+
+
+Then just write any numbers on equpment id and click on 'Registrar' and it will start the contract call
+
+![image](https://github.com/AgroInnova/.github/assets/105945231/ea9005f8-cdf7-4ac0-a808-5242a4864f3d)
+
+Just confirm it and after a while 10-20 seconds , the attestation should be complete, you'll be able to see it on Scroll Sepolia's scan and EAS Scan via the schema's hash.
+
+
+
+
+
+
 
 
 
