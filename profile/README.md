@@ -52,7 +52,7 @@ To deploy the prototype testing environment you will nedd the following.
 
 If using windows, you'll need wsl, ubuntu as the main os would be the best but having everything in wsl will work as well.
 
-#####You will need:
+####You will need:
 - Python 
 - Nodejs19+ 
 - DFX(ICP CLI) :[ Here](https://internetcomputer.org/docs/current/developer-docs/developer-tools/dev-tools-overview)https://internetcomputer.org/docs/current/developer-docs/developer-tools/dev-tools-overview
@@ -60,11 +60,51 @@ If using windows, you'll need wsl, ubuntu as the main os would be the best but h
 - Ionic : [Here](https://ionicframework.com/)https://ionicframework.com/ 
 
 
-######Clone the following repositories
+#### Clone the following repositories
 ````
 git clone https://github.com/AgroInnova/ICP_frontend_Backend.git
 git clone https://github.com/AgroInnova/AgroInnova_NestEdge.git
 git clone https://github.com/AgroInnova/mqtt-testers.git
 git clone https://github.com/AgroInnova/AgroInnova-SmartContracts-Resolvers.git
 ````
+
+#### Setup
+Once you have DFX CLI, make sure to uprgade it
+```
+$dfxvm update
+```
+
+To ensure you have the latest version Dfx.
+```
+$ dfx --version
+dfx 0.18.0
+```
+
+Go into the ICP_frontend_Backend directory.
+```
+$cd ICP_frontend_Backend
+$npm install
+$dfx start --host 127.0.0.1:8000 --clean
+```
+
+In here you'll need to wait untill the deployment is complete
+Once deployed you'll see this in the terminal
+````
+Deployed canisters.
+URLs:
+  Frontend canister via browser
+    frontend:
+      - http://127.0.0.1:8000/?canisterId=bd3sg-teaaa-aaaaa-qaaba-cai
+      - http://bd3sg-teaaa-aaaaa-qaaba-cai.localhost:8000/
+    internet_identity:
+      - http://127.0.0.1:8000/?canisterId=be2us-64aaa-aaaaa-qaabq-cai
+      - http://be2us-64aaa-aaaaa-qaabq-cai.localhost:8000/
+  Backend canister via Candid interface:
+    backend: http://127.0.0.1:8000/?canisterId=br5f7-7uaaa-aaaaa-qaaca-cai&id=bkyz2-fmaaa-aaaaa-qaaaq-cai
+    internet_identity: http://127.0.0.1:8000/?canisterId=br5f7-7uaaa-aaaaa-qaaca-cai&id=be2us-64aaa-aaaaa-qaabq-cai
+````
+
+
+
+
 
