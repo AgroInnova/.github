@@ -45,3 +45,26 @@ AgroInnova está comprometido a apoyar en los cumplimientos de los Objetivos de 
 0x1684C2a107C113c4CCB02dF651933978491dB385](https://sepolia.scrollscan.com/address/0x1684C2a107C113c4CCB02dF651933978491dB385)https://sepolia.scrollscan.com/address/0x1684C2a107C113c4CCB02dF651933978491dB385
 
 
+
+## 🖥️Desplegar demo de testeos🍃
+
+To deploy the prototype testing environment you will nedd the following.
+
+If using windows, you'll need wsl, ubuntu as the main os would be the best but having everything in wsl will work as well.
+
+#####You will need:
+- Python 
+- Nodejs19+ 
+- DFX(ICP CLI) :[ Here](https://internetcomputer.org/docs/current/developer-docs/developer-tools/dev-tools-overview)https://internetcomputer.org/docs/current/developer-docs/developer-tools/dev-tools-overview
+- NestJS : [Here:](https://docs.nestjs.com/)https://docs.nestjs.com/
+- Ionic : [Here](https://ionicframework.com/)https://ionicframework.com/ 
+
+
+######Clone the following repositories
+````
+git clone https://github.com/AgroInnova/ICP_frontend_Backend.git
+git clone https://github.com/AgroInnova/AgroInnova_NestEdge.git
+git clone https://github.com/AgroInnova/mqtt-testers.git
+git clone https://github.com/AgroInnova/AgroInnova-SmartContracts-Resolvers.git
+````
+
