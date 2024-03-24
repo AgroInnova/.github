@@ -1,12 +1,10 @@
-## Hi there 👋
+## 🖥️AgroInnova🍃
+AgroInnova busca transformar la agricultura a través de la innovación, la responsabilidad, la sostenibilidad y la accesibilidad. Brindamos soluciones tecnológicas avanzadas para mejorar la producción de alimentos y el uso eficiente de los recursos. Nos comprometemos con la responsabilidad social, trabajando en colaboración con fundaciones y programas de sostenibilidad para llevar nuestra tecnología a comunidades vulnerables. Buscamos generar un impacto social positivo y mejorar la calidad de vida de las personas.
 
-<!--
+Nuestro producto y servicio consiste en proporcionar soluciones tecnológicas para el control y monitoreo de sistemas aeropónicos o hidropónicos. Utilizamos una estructura modular personalizable, sensores y algoritmos, infraestructura física y en la nube, para tomar decisiones informadas en tiempo real y reducir costos de operación. Nuestra tecnología es capaz de optimizar la producción de alimentos, mejorar la eficiencia en el uso de recursos y aumentar la rentabilidad de los agricultores. Además, ofreceríamos servicios de mantenimiento y soporte técnico para garantizar el correcto funcionamiento de nuestros sistemas.
 
-**Here are some ideas to get you started:**
-
-🙋‍♀️ A short introduction - what is your organization all about?
-🌈 Contribution guidelines - how can the community get involved?
-👩‍💻 Useful resources - where can the community find your docs? Is there anything else the community should know?
-🍿 Fun facts - what does your team eat for breakfast?
-🧙 Remember, you can do mighty things with the power of [Markdown](https://docs.github.com/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
--->
+AgroInnova está comprometido a apoyar en los cumplimientos de los Objetivos de Desarrollo Sostenible (ODS):
+- Fin de la pobreza  y Hambre cero → Volviendo asequible y rentable para el pequeño agricultor la automatización del cultivo.
+- Salud y bienestar → Mejorando el perfil nutricional gracias al cultivo de frutas y verduras.
+- Industria, innovación e infraestructura → Trayendo la industria 4.0 con IoT al cultivo con trazabilidad y persistencia aprovechando la tecnología Blockchain.
+- Producción y consumo responsables → Gestión eficiente del agua, tierra y energía.
