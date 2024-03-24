@@ -13,6 +13,8 @@ AgroInnova está comprometido a apoyar en los cumplimientos de los Objetivos de 
 ## 🖥️AgroInnova-Expliacion Tecnica🍃
 ![agroInnovaETHLATAM](https://github.com/AgroInnova/.github/assets/105945231/a75750aa-b195-4a36-b446-a2f16e099718)
 
+[Video de Presentacion tecnica del prototipo](https://youtu.be/cYisdLh59l0)
+
 #### Repositorios Relevantes
 
 
