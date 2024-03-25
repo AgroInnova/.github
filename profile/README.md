@@ -124,8 +124,14 @@ $npm install
 $dfx start --host 127.0.0.1:8000 --clean
 ```
 
+Then just go ahead and deploy it
+
+```
+dfx deploy
+```
+
 In here you'll need to wait untill the deployment is complete
-Once deployed you'll see this in the terminal
+While deploying you should see a lot of activity on the terminal but it will take a while, when its finally deployed, you'll see this.
 
 ````
 Deployed canisters.
