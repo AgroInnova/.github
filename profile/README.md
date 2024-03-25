@@ -1,4 +1,4 @@
-![image](https://github.com/AgroInnova/.github/assets/105945231/da63fbef-7865-438d-adea-b45356520aff)### 🖥️AgroInnova🍃
+### 🖥️AgroInnova🍃
 AgroInnova busca transformar la agricultura a través de la innovación, la responsabilidad, la sostenibilidad y la accesibilidad. Brindamos soluciones tecnológicas avanzadas para mejorar la producción de alimentos y el uso eficiente de los recursos. Nos comprometemos con la responsabilidad social, trabajando en colaboración con fundaciones y programas de sostenibilidad para llevar nuestra tecnología a comunidades vulnerables. Buscamos generar un impacto social positivo y mejorar la calidad de vida de las personas.
 
 Nuestro producto y servicio consiste en proporcionar soluciones tecnológicas para el control y monitoreo de sistemas aeropónicos o hidropónicos. Utilizamos una estructura modular personalizable, sensores y algoritmos, infraestructura física y en la nube, para tomar decisiones informadas en tiempo real y reducir costos de operación. Nuestra tecnología es capaz de optimizar la producción de alimentos, mejorar la eficiencia en el uso de recursos y aumentar la rentabilidad de los agricultores. Además, ofreceríamos servicios de mantenimiento y soporte técnico para garantizar el correcto funcionamiento de nuestros sistemas.
@@ -59,6 +59,7 @@ If using windows, you'll need wsl, ubuntu as the main os would be the best but h
 - NestJS : [Here:](https://docs.nestjs.com/)https://docs.nestjs.com/
 - Ionic : [Here](https://ionicframework.com/)https://ionicframework.com/
 - Metamask setup on Scroll Sepolia testnet with funds.
+- Mosquitto MQTT broker: here: https://mosquitto.org/download/
 
 
 #### Clone the following repositories
@@ -205,6 +206,30 @@ http://bd3sg-teaaa-aaaaa-qaaba-cai.localhost:8000/
 You'll be greeted once again with the login popup
 
 ![image](https://github.com/AgroInnova/.github/assets/105945231/ae247fa9-4e0a-4e7c-a6f5-4886737c9b58)
+
+You'll have  a list of created identities, in your case since you only made one it should be 10000
+
+
+Click on the more options text button.
+
+![image](https://github.com/AgroInnova/.github/assets/105945231/f20a7b74-13a5-45c6-b663-63894e535fa7
+
+And here, do a Create New
+
+Follow the prompts to create a new one (for this test you'll only need one).
+
+Once a new one is created you should be treated as a user since the admin has already been setup by creating the first identity.
+
+After the backend authenticates that this is a user, it will register you on the user list it has saved over there and you'll be redirected on to this page.
+
+![image](https://github.com/AgroInnova/.github/assets/105945231/4db58ead-f295-4880-8e02-7d3985464356)
+
+Since this is for testing purposes. You'll need to click on the create 4 test with current id.
+
+This will automatically generate 4 attestations in which its registered that the current ID provided by ICP is the owner of modules id 3, 33,333,3333. (this is important, otherwise the next page WILL NOT WORK since no attestations have not been created so module ownership verification will not be possible.
+
+Here we need to stop. 
+
 
 
 
