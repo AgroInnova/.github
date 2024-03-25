@@ -61,6 +61,41 @@ If using windows, you'll need wsl, ubuntu as the main os would be the best but h
 - Metamask setup on Scroll Sepolia testnet with funds.
 - Mosquitto MQTT broker: here: https://mosquitto.org/download/
 
+### Update ubuntu
+````
+sudo apt-get update
+sudo apt-get upgrade
+````
+
+### Setup the MQTT broker
+
+This is necessary since the nestJS backend will not be able to listen to messages if it cannot connect to the mqtt service.
+
+````bash
+sudo apt-get install mosquitto
+````
+
+Afterwards   check if it installed correctly
+
+```bash
+systemctl status mosquitto.service
+```
+Now you'll need to edit /etc/mosquitto/mosquitto.conf
+
+Do it via vim nano or vscode but its important that you add this information on it.
+```
+listener 1883
+protocol mqtt
+allow_anonymous true
+```
+
+Now just execute
+
+```bash
+sudo systemctl restart mosquitto.service
+```
+
+And the mqtt broker will be at the listen on the correct port to provide messages on the topics the mqtt testers and the nestjs backend are publishing and subscribed to. 
 
 #### Clone the following repositories
 ````
@@ -157,6 +192,14 @@ Once this is done you can go ahead and deploy the nestJs backend
 $nest start
 ```
 
+If the MosquittoMQtt broker was setup properly you should see the following in the terminal nest got executed.
+
+![image](https://github.com/AgroInnova/.github/assets/105945231/088e656f-8ef8-4c61-8ab2-a3fc51ef58f7)
+
+Else you'll get a constant message [Agregatte Error] and nest will not be able to listen to mqtt messages sent its way.
+
+
+#### User configuration
 Now you'll need to configure users and the admin on the ICP backend via the frontend
 Fortunately this is automatically done by the ICP backend, more about this in a minute.
 
@@ -228,17 +271,80 @@ Since this is for testing purposes. You'll need to click on the create 4 test wi
 
 This will automatically generate 4 attestations in which its registered that the current ID provided by ICP is the owner of modules id 3, 33,333,3333. (this is important, otherwise the next page WILL NOT WORK since no attestations have not been created so module ownership verification will not be possible.
 
+
+Once the attestations are done we continue.
+
+
 Here we need to stop. 
 
+Enter the page inspection on your brower and go to the console.
+
+You'll see something like this.
+
+![image](https://github.com/AgroInnova/.github/assets/105945231/530c2f35-3c00-471f-8f76-e3ef79f0c9b1)
 
 
+That long text string is the User's ICP Internet identity's ID.
+
+yy26u-35jkr-mhxmx-rbxpq-oyaj2-aibng-3h4sg-zjta5-2ui4o-niklr-fqe
+
+You'll need to go to the mqtt testers python script's folder.
 
 
+````
+cd .\mqtt-testers\
+````
+
+and 
+
+````
+code Esp32 sim completo.py
+
+````
+
+Make sure the python dependencies are installed
+
+import paho.mqtt.client as mqtt
+import random
+import json
+import threading
+import time
+
+you'll need paho for the mqtt message transmission.,
+
+```
+pip install paho-mqtt
+```
+
+Find the following lines (highlightedd)
+
+![image](https://github.com/AgroInnova/.github/assets/105945231/e622ad82-c4bb-4a1c-ba19-1a59ab83e9b9)
+
+and replace it with the id found on the console from the testattestations page.
+
+![image](https://github.com/AgroInnova/.github/assets/105945231/de055c36-417e-4460-a304-6e32961e94e8)
 
 
+once everything is good you can start sending messages simply by running that same script.
+
+if everything was configured correctly
+on the terminal which nestJs was deployed you should ssee the post messages being returned with OK
+
+![image](https://github.com/AgroInnova/.github/assets/105945231/04101320-768d-43c7-a4f2-3a96bce55acc)
 
 
+now we go back to the testattestations page
 
+![image](https://github.com/AgroInnova/.github/assets/105945231/d359a5c2-c31a-4f76-b219-03ae2457bdfb)
+
+And click on the other button to view the attestations
+
+AFter a while, the frontend will do the graphql query based on the identity on the EAS Scan graphql endpoint and it will return an array of modules id in which this current id is the owner of, then the frontend will query the backend for the equipment information and if it finds them it will show them like this, updating it every couple of seconds as new information is received by the Backend cannister on the ICP deploymebnt.
+
+![image](https://github.com/AgroInnova/.github/assets/105945231/6edf2a40-25d2-49d7-a57b-f85e261e1fbb)
+
+
+And that concludes the prototype's testing.
 
 
 
